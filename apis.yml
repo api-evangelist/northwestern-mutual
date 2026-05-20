@@ -4,6 +4,10 @@ url:
 modified: '2026-03-21'
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/northwesternmutual
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/northwestern-mutual
   - type: Website
     url: https://www.northwestern-mutual.com
 description: >-
