@@ -1,11 +1,15 @@
-generated: '2026-07-11'
+generated: '2026-08-28'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
-- host: www.northwestern-mutual.com
-  https: false
+- host: www.northwesternmutual.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 28 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 63072000
 domains:
-- domain: northwestern-mutual.com
+- domain: northwesternmutual.com
   dnssec: false
   caa: []
   spf: true

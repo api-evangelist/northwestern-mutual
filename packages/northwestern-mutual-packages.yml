@@ -1,0 +1,123 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  registry.npmjs.org and proxy.golang.org metadata endpoints, cross-checked against
+  the github.com/northwesternmutual organization listing (GitHub API, 37 public repos).
+  PyPI, Maven Central, NuGet, RubyGems, Packagist and crates.io were checked and hold
+  no first-party Northwestern Mutual package.
+note: >-
+  IMPORTANT — none of these is an API client. Northwestern Mutual publishes no public
+  API, so it ships no SDK. Everything below is general-purpose open source engineering
+  tooling released by the company's own GitHub organization: a Kubernetes API gateway
+  (Kanali, since archived), a Gremlin/TinkerPop graph driver, a JavaScript rules engine
+  and some React Native components. They are recorded here as first-party published
+  packages, and deliberately NOT wired as a `type: SDKs` pointer, because no Northwestern
+  Mutual API exists for them to be a client of.
+package_count: 6
+official_sdk_count: 0
+packages:
+  - name: grammes
+    registry: go
+    module: github.com/northwesternmutual/grammes
+    url: https://pkg.go.dev/github.com/northwesternmutual/grammes
+    repository: https://github.com/northwesternmutual/grammes
+    language: Go
+    official: true
+    api_client: false
+    version: v1.2.0
+    published: '2020-04-16'
+    license: Apache-2.0
+    description: Go package for communicating with Apache TinkerPop graph computing frameworks over Gremlin.
+    note: >-
+      The most active repo in the org — last pushed 2026-08-24 with 126 stars — but the
+      latest tagged release on proxy.golang.org is still v1.2.0 from 2020-04-16, so a Go
+      consumer pinning by module version gets six-year-old code.
+  - name: regent
+    registry: npm
+    url: https://www.npmjs.com/package/regent
+    repository: https://github.com/northwesternmutual/regent
+    language: TypeScript
+    official: true
+    api_client: false
+    version: 3.6.0
+    published: '2023-06-21'
+    license: MIT
+    description: Functional JavaScript rules engine — ask true/false questions of a data structure.
+    note: Published under the `northwesternmutual` npm maintainer account. First published 2017-12-22.
+  - name: kanali
+    registry: go
+    module: github.com/northwesternmutual/kanali
+    url: https://pkg.go.dev/github.com/northwesternmutual/kanali
+    repository: https://github.com/northwesternmutual/kanali
+    language: Go
+    official: true
+    api_client: false
+    version: v1.2.3
+    published: '2017-11-13'
+    license: Apache-2.0
+    deprecated: true
+    description: Kubernetes-native API management solution, open sourced by Northwestern Mutual in 2017.
+    note: >-
+      Repository is ARCHIVED on GitHub (last push 2020-10-27) and the last tagged release is
+      v1.2.3 from 2017-11-13. Northwestern Mutual has since moved its gateway to Tyk per
+      vendor case study. Recorded for provenance, not for use.
+  - name: kanalictl
+    registry: go
+    module: github.com/northwesternmutual/kanalictl
+    url: https://pkg.go.dev/github.com/northwesternmutual/kanalictl
+    repository: https://github.com/northwesternmutual/kanalictl
+    language: Go
+    official: true
+    api_client: false
+    version: v1.1.1
+    published: '2017-11-15'
+    license: Apache-2.0
+    deprecated: true
+    description: CLI interface for Kanali.
+    note: Repository archived. Superseded with Kanali itself.
+  - name: generator-kanali-plugin
+    registry: npm
+    url: https://www.npmjs.com/package/generator-kanali-plugin
+    repository: https://github.com/northwesternmutual/kanali-plugin-template
+    language: JavaScript
+    official: true
+    api_client: false
+    version: 1.0.0
+    published: '2017-07-29'
+    license: MIT
+    deprecated: true
+    description: Yeoman generator for Kanali plugins.
+    note: >-
+      Repository archived. Published by the npm user `frankgreco` rather than the
+      `northwesternmutual` org account; treated as first-party because the source repo
+      lives in the company's own GitHub organization.
+  - name: react-native-tab-bar
+    registry: npm
+    url: https://www.npmjs.com/package/react-native-tab-bar
+    repository: https://github.com/northwesternmutual/react-native-tab-bar
+    language: JavaScript
+    official: true
+    api_client: false
+    version: 1.2.2
+    published: '2017-02-15'
+    license: MIT
+    deprecated: true
+    description: Simple tab bar component for React Native.
+    note: Repository archived. Published under the `northwesternmutual` npm maintainer account.
+registries_checked:
+  - registry: npm
+    result: 3 first-party packages found
+  - registry: pkg.go.dev / proxy.golang.org
+    result: 3 first-party modules found
+  - registry: PyPI
+    result: none — no northwesternmutual package; the unrelated PyPI project `regent` is a different author
+  - registry: Maven Central
+    result: none
+  - registry: NuGet
+    result: none
+  - registry: RubyGems
+    result: none
+  - registry: Packagist
+    result: none
+  - registry: crates.io
+    result: none

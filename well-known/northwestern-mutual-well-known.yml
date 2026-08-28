@@ -1,0 +1,53 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of every /.well-known/ path in the pipeline
+  contract against each Northwestern Mutual host reachable from apis.yml
+  (www.northwesternmutual.com, login.northwesternmutual.com,
+  news.northwesternmutual.com). There is no API host to probe — Northwestern
+  Mutual publishes no public API or developer portal.
+hosts:
+  - host: www.northwesternmutual.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        content_type: application/json
+        file: northwestern-mutual-security.txt
+        note: >-
+          Served with content-type application/json rather than the RFC 9116
+          text/plain, but the body is a valid, unsigned security.txt. Points at a
+          Bugcrowd-managed program and security@northwesternmutual.com; Expires
+          2030-06-01, which is well beyond the RFC 9116 guidance of under a year.
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: login.northwesternmutual.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+        note: Customer sign-in host redirects every /.well-known/ path into the login SPA; no document served.
+      - path: /.well-known/openid-configuration
+        status: 302
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+      - path: /.well-known/api-catalog
+        status: 302
+      - path: /.well-known/ai-plugin.json
+        status: 302
+      - path: /.well-known/agent-card.json
+        status: 302
+      - path: /.well-known/agent.json
+        status: 302
+  - host: news.northwesternmutual.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404

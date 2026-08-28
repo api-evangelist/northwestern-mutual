@@ -1,0 +1,66 @@
+# Northwestern Mutual
+
+> Northwestern Mutual is a Milwaukee-based Fortune 500 mutual insurance and financial
+> services company founded in 1857, providing life insurance, disability income insurance,
+> long-term care insurance, annuities, investment products, brokerage and wealth management
+> services through a nationwide network of financial advisors.
+
+## Important for agents: there is no public API
+
+Northwestern Mutual publishes **no public API, no developer portal, no API reference and no
+machine-readable contract**. As of 2026-08-28 every one of the following returned 404 or did
+not resolve:
+
+- `https://www.northwesternmutual.com/openapi.json` — 404
+- `https://www.northwesternmutual.com/swagger.json` — 404
+- `https://www.northwesternmutual.com/api-docs` — 404
+- `https://www.northwesternmutual.com/graphql` — 404
+- `https://www.northwesternmutual.com/llms.txt` — 404
+- `developer.northwesternmutual.com`, `developers.northwesternmutual.com`,
+  `api.northwesternmutual.com`, `apis.northwesternmutual.com`,
+  `partner.northwesternmutual.com`, `sandbox.northwesternmutual.com` — no DNS record
+
+The company does operate a substantial API estate, but it is **internal**: domain and
+experience APIs behind a centrally governed API gateway, harmonized with GraphQL. This is
+documented only in third-party vendor case studies and conference talks, never as a public
+contract. Do not attempt to construct or guess Northwestern Mutual API endpoints — none are
+published, and no base URL for one exists in any public source.
+
+There is no sandbox, no API key issuance, no pricing page for an API, no published rate
+limits, no webhooks catalog, no AsyncAPI, no MCP server and no A2A agent card.
+
+## What Northwestern Mutual does publish
+
+- [Website](https://www.northwesternmutual.com): Corporate and product site.
+- [Newsroom](https://news.northwesternmutual.com/): Press releases and company news.
+- [Contact](https://www.northwesternmutual.com/contact-us/): Customer support entry point.
+- [Client login](https://login.northwesternmutual.com/login): Authenticated customer account access.
+- [Legal information](https://www.northwesternmutual.com/legal-information/): Terms of use and legal notices.
+- [Privacy notices](https://www.northwesternmutual.com/privacy-notices/): Privacy policy, plus CCPA and HIPAA notices.
+- [Security and privacy](https://www.northwesternmutual.com/security-and-privacy/): Customer-facing security guidance.
+
+## Security
+
+- [security.txt](https://www.northwesternmutual.com/.well-known/security.txt): Served (HTTP 200). Points at the Bugcrowd program and `security@northwesternmutual.com`.
+- [Responsible disclosure policy](https://www.northwesternmutual.com/responsible-disclosure-policy/): In scope is "any Northwestern Mutual services exposed to the internet".
+- [Bugcrowd program](https://bugcrowd.com/engagements/northwestern-mutual-mbb-og): The disclosure program is managed by Bugcrowd.
+
+## Open source
+
+Northwestern Mutual maintains a public GitHub organization of general engineering tooling.
+**None of these are API clients** — the company has no public API for them to be a client of.
+
+- [github.com/northwesternmutual](https://github.com/northwesternmutual): 37 public repositories; org contact `oss@northwesternmutual.com`.
+- [grammes](https://github.com/northwesternmutual/grammes): Go driver for Apache TinkerPop / Gremlin graph databases. Latest tagged release `v1.2.0` (2020-04-16).
+- [regent](https://github.com/northwesternmutual/regent): Functional JavaScript rules engine. npm `regent@3.6.0` (2023-06-21).
+- [kanali](https://github.com/northwesternmutual/kanali): Kubernetes-native API management gateway, open sourced 2017. **Archived**; latest release `v1.2.3` (2017-11-13).
+
+## Profile artifacts
+
+This section indexes the API Evangelist third-party profile, not Northwestern Mutual publications.
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/northwestern-mutual/refs/heads/main/apis.yml): APIs.json profile for Northwestern Mutual.
+- [Packages](packages/northwestern-mutual-packages.yml): First-party published open source packages with versions and dates.
+- [Well-known probe](well-known/northwestern-mutual-well-known.yml): Every `/.well-known/` path probed per host, with status.
+- [Domain security](security/northwestern-mutual-domain-security.yml): TLS, HSTS, DNSSEC, CAA, SPF and DMARC probe results.
+- [Vulnerability disclosure](security/northwestern-mutual-vulnerability-disclosure.yml): Disclosure program contacts and policy.

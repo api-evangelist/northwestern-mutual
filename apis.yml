@@ -1,34 +1,101 @@
 aid: northwestern-mutual
 name: "Northwestern Mutual"
 specificationVersion: '0.23'
+description: >-
+  Northwestern Mutual is a Milwaukee-based Fortune 500 mutual insurance and financial
+  services company founded in 1857, providing life insurance, disability income insurance,
+  long-term care insurance, annuities, investment products, brokerage and wealth management
+  services to individuals, families and businesses through a nationwide network of financial
+  advisors. The company operates a large internal API estate — domain and experience APIs
+  behind an API gateway, with GraphQL used to harmonize them — but publishes no public
+  developer program, API documentation or machine-readable contract; its public engineering
+  presence is an open source GitHub organization and a Bugcrowd-managed responsible
+  disclosure program.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/northwestern-mutual.png
+created: '2026-03-21'
+modified: '2026-08-28'
+tags:
+  - Insurance
+  - Life-Insurance
+  - Financial-Services
+  - Wealth-Management
+  - Annuities
+  - Investment-Management
+  - Fortune 500
+url: https://raw.githubusercontent.com/api-evangelist/northwestern-mutual/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
-  onboarding: unknown
+  onboarding: none
   trial: false
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/northwestern-mutual.png
-tags:
-  - Fortune 500
-url: 
-  https://raw.githubusercontent.com/api-evangelist/northwestern-mutual/refs/heads/main/apis.yml
-modified: '2026-03-21'
+  label: No Public API
+  confidence: high
+  source:
+    - https://www.northwesternmutual.com/
+    - https://github.com/northwesternmutual
+  generated: '2026-08-28'
+  method: probed
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
 apis: []
 common:
-  - type: DomainSecurity
-    url: security/northwestern-mutual-domain-security.yml
+  - type: VulnerabilityDisclosure
+    url: security/northwestern-mutual-vulnerability-disclosure.yml
+  - type: Website
+    url: https://www.northwesternmutual.com
   - type: GitHubOrganization
     url: https://github.com/northwesternmutual
   - type: LinkedIn
     url: https://www.linkedin.com/company/northwestern-mutual
-  - type: Website
-    url: https://www.northwestern-mutual.com
-description: >-
-  Northwestern Mutual is a leading financial security company providing life, disability
-  income, and long-term care insurance, annuities, and investment products and services
-  to families and businesses.
+  - type: Blog
+    url: https://news.northwesternmutual.com/
+  - type: Support
+    url: https://www.northwesternmutual.com/contact-us/
+  - type: TermsOfService
+    url: https://www.northwesternmutual.com/legal-information/
+  - type: PrivacyPolicy
+    url: https://www.northwesternmutual.com/privacy-notices/
+  - type: Login
+    url: https://login.northwesternmutual.com/login
+  - type: DomainSecurity
+    url: security/northwestern-mutual-domain-security.yml
+  - type: Security
+    url: security/northwestern-mutual-vulnerability-disclosure.yml
+  - type: SecurityTxt
+    url: well-known/northwestern-mutual-security.txt
+  - type: WellKnown
+    url: well-known/northwestern-mutual-well-known.yml
+  - type: Packages
+    url: packages/northwestern-mutual-packages.yml
+  - type: LLMsTxt
+    url: llms/northwestern-mutual-llms.txt
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Northwestern Mutual runs a large internal API estate — domain and experience APIs behind
+    a governed gateway, harmonized with GraphQL, described only in third-party vendor case
+    studies — but exposes none of it publicly: there is no developer.* or api.* DNS record at
+    all, and every spec path on the corporate host (/openapi.json, /swagger.json, /api-docs,
+    /graphql, /llms.txt) returns the site's 404 page.
+  evidence:
+    - url: https://www.northwesternmutual.com/openapi.json
+      status: 404
+    - url: https://www.northwesternmutual.com/api-docs
+      status: 404
+    - url: https://www.northwesternmutual.com/graphql
+      status: 404
+    - url: https://www.northwesternmutual.com/llms.txt
+      status: 404
+    - url: https://developer.northwesternmutual.com
+      status: 0
+    - url: https://api.northwesternmutual.com
+      status: 0
+  checked: '2026-08-28'
