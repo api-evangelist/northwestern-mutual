@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence at Northwestern Mutual
 url: https://emerj.com/artificial-intelligence-at-northwestern-mutual/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Northwestern Mutual" press release artificial intelligence'
 position: 4
 source: serpapi-google
