@@ -1,4 +1,34 @@
 edges:
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/regent
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: regent
+      version: 3.6.0
+      released: '2023-06-21'
+      released_field: modified
+      lapsed: true
+      page: https://www.npmjs.com/package/regent
+      repo_leg: github-org:northwesternmutual
+      publisher_leg: email:northwesternmutual.com
+      matched_by: domain
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 - partner_name: SEC (investment adviser registration)
   partner: null
   partner_match: register
@@ -32,36 +62,6 @@ edges:
     - NORTHWESTERN MUTUAL INVESTMENT MANAGEMENT COMPANY, LLC (CRD 307865)
   detected_by: sweep-asset-management.py
   first_seen: '2026-10-18'
-- partner_name: npm registry
-  partner: npm
-  partner_match: register
-  type: register
-  direction: provider-built
-  category: official SDK (JavaScript/TypeScript)
-  evidence: https://www.npmjs.com/package/regent
-  channel: package-registry
-  relationship: distribution-channel
-  contract_reference:
-    register: npm registry (public registry JSON)
-    spec_file: null
-    language: JavaScript/TypeScript
-    packages:
-    - name: regent
-      version: 3.6.0
-      released: '2023-06-21'
-      released_field: modified
-      lapsed: true
-      page: https://www.npmjs.com/package/regent
-      repo_leg: github-org:northwesternmutual
-      publisher_leg: email:northwesternmutual.com
-      matched_by: domain
-    current: false
-    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
-      24 months'
-    detected_by: sweep-official-sdks.py
-    detected: '2026-10-18'
-  detected_by: sweep-official-sdks.py
-  first_seen: '2026-10-18'
 generated: '2026-10-18'
 method: searched
 source:
@@ -75,5 +75,6 @@ checked:
 - https://registry.npmjs.org
 - https://repo1.maven.org/maven2
 - https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_19_2026.xml.gz
 - https://rubygems.org/api/v1
 - https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
